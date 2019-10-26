@@ -18,9 +18,19 @@ function day1AM() {
     var fullName = "Matthew Barnhart";
     var age = 32;
     var weight = 175;
-    var heightInInches = 75;
+    var heightInInches = 70;
     var likesPizza = true;
     var hasTattoos = false;
+
+    age = 33;
+    age++
+
+console.log(fullName + " is " + age + " years old.")
+console.log("Do you like pizz? " + likesPizza + "!")
+var feet =  Math.floor(heightInInches / 12);
+var inches = heightInInches % 12;
+console.log(feet);
+console.log(fullName + " is " + feet + " feet " + inches + " inches tall.");
 }
 
 day1AM();
