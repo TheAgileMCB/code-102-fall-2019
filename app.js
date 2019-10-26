@@ -20,7 +20,7 @@ function day1AM() {
     var weight = 175;
     var heightInInches = 70;
     var likesPizza = true;
-    var hasTattoos = false;
+    var hasTattoos = true;
 
     age = 33;
     age++
@@ -31,6 +31,20 @@ var feet =  Math.floor(heightInInches / 12);
 var inches = heightInInches % 12;
 console.log(feet);
 console.log(fullName + " is " + feet + " feet " + inches + " inches tall.");
+
+print("Hello!");
+var convertedTemp = f2c(212);
 }
 
 day1AM();
+
+function print(input) {
+    console.log(input);
+}
+
+// converts Fahrenheit to Celsius
+// input: temp in Fehrenheit
+function f2c(tempF) {
+    return((tempF - 32) * 5 / 9);
+
+}
