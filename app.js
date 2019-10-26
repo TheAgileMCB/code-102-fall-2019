@@ -14,3 +14,13 @@ function draw() {
     line(0, 40, 640, 40);
 } 
 
+function day1AM() {
+    var fullName = "Matthew Barnhart";
+    var age = 32;
+    var weight = 175;
+    var heightInInches = 75;
+    var likesPizza = true;
+    var hasTattoos = false;
+}
+
+day1AM();
