@@ -14,6 +14,8 @@ function draw() {
     line(0, 40, 640, 40);
 } 
 
+age = 32;
+
 function day1AM() {
     var fullName = "Matthew Barnhart";
     var age = 32;
@@ -31,20 +33,38 @@ var feet =  Math.floor(heightInInches / 12);
 var inches = heightInInches % 12;
 console.log(feet);
 console.log(fullName + " is " + feet + " feet " + inches + " inches tall.");
-
-print("Hello!");
-var convertedTemp = f2c(212);
 }
 
 day1AM();
+day1PM();
 
-function print(input) {
-    console.log(input);
+
+function day1PM() {
+
+    print("Hello!");
+    var convertedTemp = f2c(212);
+    print(canIGoToTheCasino(age, "IA"));
+    age = 19;
+    print(canIGoToTheCasino(age, "IA"));
+    print(canIGoToTheCasino(age, "MN"));
 }
+
+    function print(input) {
+    console.log(input);
+    }
 
 // converts Fahrenheit to Celsius
 // input: temp in Fehrenheit
 function f2c(tempF) {
     return((tempF - 32) * 5 / 9);
 
+    }
+
+
+function bmiConverter(weight, height) {
+    return 0;
+}
+
+function canIGoToTheCasino(age, location) {
+    return age >= 21 && location == "IA" || age >= 18 && location == "MN";
 }
