@@ -98,18 +98,75 @@ function day2AM() {
         print(count);
         count--;
     }
-    var sum = 0;
-    var count = 0;
-    while(true) {
-        var input = parseInt (prompt('Enter a number. Type 0 to end. '));
-        if(input === 0) {
-            break;
-        } else {
-            sum += input;
-            count++;
-        }
+    // var sum = 0;
+    // var count = 0;
+    // while(true) {
+    //     var input = parseInt (prompt('Enter a number. Type 0 to end. '));
+    //     if(input === 0) {
+    //         break;
+    //     } else {
+    //         sum += input;
+    //         count++;
+    //     }
+    // }
+    // console.log('The average of your numbers is ' + sum/count);
+
+    for(var count=0; count <= 100; count+=10) {
+        print(count);
     }
-    console.log('The average of your numbers is ' + sum/count);
+
+    var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "Decemeber"];
+    print(months[0]);
+    print(months[5]);
+
+    for(var i = 0; i < months.length; i++) {
+        print(months[i]);
+    }
+
+    var states = ['Alabama', 'Alaska', 'American Samoa', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 'Delaware', 'District of Columbia', 'Federated States of Micronesia', 'Florida', 'Georgia', 'Guam', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana', 'Maine', 'Marshall Islands', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota', 'Northern Mariana Islands', 'Ohio', 'Oklahoma', 'Oregon', 'Palau', 'Pennsylvania', 'Puerto Rico', 'Rhode Island', 'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont', 'Virgin Island', 'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'];
+
+    states.forEach(function(state) {
+        if(state === "Iowa" || state === "Illinois") {
+        print(state + " is cool.");
+        } else {
+            print(state + " ain't so great.");
+        }
+    });
+
 }
 
-day2AM();
+
+
+// day2AM();
+
+function day2PM() {
+    var matt = {
+        firstName: "Matt",
+        middleName: "Charles",
+        lastName: "Barnhart",
+        dob: [2, 5, 1987], //month, day, year
+        likesPizza: true,
+        heightInInches: 70,
+        fullName: function() {
+            return this.firstName + ' ' + this.middleName + ' ' + this.lastName;
+        },
+        age: function() {
+            var today = new Date();
+            var year = today.getFullYear();
+            var month = today.getMonth() + 1;
+            var day = today.getDate();
+            var myAge = year - this.dob[2];
+            if(month < this.dob[0] || month === this.dob[0] && day < this.dob[1]) { myAge--;
+            }
+            return (myAge);
+        },
+    };
+
+    print(matt.firstName);
+    print(matt.fullName());
+    print(matt.age());
+
+
+}
+
+day2PM();
